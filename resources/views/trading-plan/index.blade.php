@@ -44,8 +44,8 @@
             <div class="mb-5">
                 <label for="capital" class="form-label">Modal Awal</label>
                 <input type="number" id="capital" name="capital"
-                    value="{{ old('capital', $plan?->capital ?? 5000000) }}"
-                    class="form-input" placeholder="5000000" min="50">
+                    value="{{ old('capital') }}"
+                    class="form-input" placeholder="Masukkan modal awal" min="50">
                 <p class="text-gray-600 text-xs mt-1">Min: IDR 100.000 | USD $50 | USC 5.000¢</p>
                 @error('capital')<p class="text-red-400 text-xs mt-1">{{ $message }}</p>@enderror
             </div>
@@ -236,7 +236,7 @@
             </div>
 
         @else
-            <div class="tech-card rounded-2xl p-16 text-center h-full flex flex-col items-center justify-center">
+            <div class="tech-card rounded-2xl p-8 sm:p-16 text-center h-full flex flex-col items-center justify-center">
                 <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-green-500/10 border border-cyan-500/20 flex items-center justify-center mx-auto mb-5">
                     <i class="fas fa-chart-line text-3xl text-cyan-400/50"></i>
                 </div>
@@ -250,34 +250,54 @@
 
 </div>
 
-{{-- Real-time Preview Container (will be populated by JavaScript) --}}
-<div id="previewContainer" class="hidden">
-    <!-- Preview will be loaded here dynamically -->
-</div>
-
 @push('scripts')
+@unless($planData)
 <script src="{{ asset('js/trading-preview.js') }}"></script>
+@endunless
 <style>
     .preview-card {
-        @apply bg-gray-800/50 border border-gray-700 rounded-xl p-3;
+        background: rgba(31, 41, 55, 0.5);
+        border: 1px solid var(--border, rgba(55, 65, 81, 0.5));
+        border-radius: 0.75rem;
+        padding: 0.75rem;
     }
     .preview-label {
-        @apply text-xs text-gray-500 uppercase tracking-wider mb-1;
+        font-size: 0.75rem;
+        color: var(--text-faint, #6b7280);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.25rem;
     }
     .preview-value {
-        @apply text-lg font-bold;
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+    .preview-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .preview-table {
-        @apply w-full text-sm;
+        width: 100%;
+        font-size: 0.875rem;
+        table-layout: fixed;
+        border-collapse: collapse;
     }
     .preview-table th {
-        @apply bg-gray-800 text-gray-400 text-left px-3 py-2 font-semibold;
+        background: var(--bg-800, #1f2937);
+        color: var(--text-faint, #6b7280);
+        text-align: left;
+        padding: 0.5rem 0.75rem;
+        font-weight: 600;
+        white-space: nowrap;
     }
     .preview-table td {
-        @apply border-t border-gray-800 px-3 py-2;
+        border-top: 1px solid var(--bg-800, #1f2937);
+        padding: 0.5rem 0.75rem;
+        white-space: nowrap;
     }
     .preview-table tr:hover {
-        @apply bg-gray-800/30;
+        background: rgba(31, 41, 55, 0.3);
     }
 </style>
 @endpush

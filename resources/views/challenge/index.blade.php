@@ -3,13 +3,13 @@
 
 @section('content')
 <div class="mb-6">
-    <h1 class="text-2xl font-bold gradient-text">🏆 Challenge 30 Hari</h1>
+    <h1 class="text-xl sm:text-2xl font-bold gradient-text">🏆 Challenge 30 Hari</h1>
     <p class="text-gray-400 mt-1 text-sm">Double your capital dalam 30 hari dengan disiplin trading</p>
 </div>
 
 @if($challenge)
     {{-- Active Challenge --}}
-    <div class="tech-card rounded-2xl p-6 border border-cyan-500/20 mb-6">
+    <div class="tech-card rounded-2xl p-4 sm:p-6 border border-cyan-500/20 mb-6">
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center mb-5">
             <div class="flex items-center gap-3 min-w-0 flex-1">
                 <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center shrink-0">
@@ -23,7 +23,7 @@
             <span class="badge badge-active self-start sm:ml-auto sm:self-center">AKTIF</span>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
             <div class="stat-card text-center">
                 <div class="text-gray-400 text-xs">Modal Awal</div>
                 <div class="font-bold text-white">{{ number_format($challenge->initial_capital, 0, ',', '.') }}</div>

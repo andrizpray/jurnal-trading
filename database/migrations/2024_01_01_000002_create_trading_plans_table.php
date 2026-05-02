@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->enum('currency', ['IDR', 'USD'])->default('IDR');
-            $table->decimal('capital', 15, 2);
+            $table->decimal('capital', 20, 2);
             $table->enum('trader_type', ['conservative', 'moderate', 'aggressive']);
             $table->string('currency_pair', 20)->default('EUR/USD');
             $table->integer('stop_loss_pips');

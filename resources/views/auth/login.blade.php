@@ -66,26 +66,29 @@
             .btn-primary:hover { opacity: 0.9; }
             .alert-error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #f87171; border-radius: 0.75rem; padding: 0.75rem 1rem; }
             .alert-success { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; border-radius: 0.75rem; padding: 0.75rem 1rem; }
-            .password-wrapper { position: relative; }
-            .password-wrapper input { padding-right: 2.75rem; }
-            .password-toggle {
-                position: absolute;
-                right: 0.75rem;
-                top: 50%;
-                transform: translateY(-50%);
-                background: none;
-                border: none;
-                color: #6b7280;
-                cursor: pointer;
-                padding: 0.25rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: color 0.2s;
-            }
-            .password-toggle:hover { color: #06b6d4; }
         </style>
     @endif
+    {{-- Password toggle styles — always loaded --}}
+    <style>
+        .password-wrapper { position: relative; }
+        .password-wrapper input { padding-right: 2.75rem; }
+        .password-toggle {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            padding: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+        }
+        .password-toggle:hover { color: #06b6d4; }
+    </style>
 </head>
 <body class="bg-gray-950 text-gray-100 font-inter min-h-screen flex items-center justify-center p-4">
 

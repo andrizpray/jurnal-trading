@@ -30,6 +30,8 @@ Route::middleware(['auth'])->group(function () {
 
     // Journal
     Route::resource('journal', JournalController::class);
+    Route::get('/journal/export/excel', [JournalController::class, 'exportExcel'])->name('journal.export.excel');
+    Route::get('/journal/export/pdf', [JournalController::class, 'exportPdf'])->name('journal.export.pdf');
 
     // Settings
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');

@@ -78,7 +78,7 @@
                     <label class="flex-1 cursor-pointer">
                         <input type="radio" name="emotion_score" value="{{ $i }}"
                                {{ old('emotion_score', $journal->emotion_score) == $i ? 'checked' : '' }} class="sr-only peer">
-                        <div class="text-center py-2 rounded-lg border border-gray-700
+                        <div class="text-center py-3 rounded-lg border border-gray-700
                                     peer-checked:border-yellow-400 peer-checked:bg-yellow-400/10
                                     hover:border-gray-500 transition-all">
                             <div class="text-lg">{{ ['😰','😐','🙂','😊','🤩'][$i-1] }}</div>

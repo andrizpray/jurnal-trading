@@ -38,7 +38,7 @@
     </div>
 </div>
 
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
 
     {{-- Grid 30 Hari --}}
     <div class="lg:col-span-2 space-y-6">

@@ -114,7 +114,7 @@
             <form action="{{ route('journal.destroy', $journal) }}" method="POST"
                   onsubmit="return confirm('Hapus entry ini secara permanen?')">
                 @csrf @method('DELETE')
-                <button type="submit" class="btn-danger px-5">
+                <button type="submit" class="btn-danger px-5 py-3">
                     <i class="fas fa-trash"></i>
                 </button>
             </form>

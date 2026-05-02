@@ -5,7 +5,7 @@
 <div class="space-y-6">
 
     {{-- Welcome Banner --}}
-    <div class="tech-card rounded-2xl p-6 relative overflow-hidden">
+    <div class="tech-card rounded-2xl p-4 sm:p-6 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/5 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-48 h-48 bg-green-500/5 rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
         <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">

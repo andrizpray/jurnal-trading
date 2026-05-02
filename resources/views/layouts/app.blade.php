@@ -590,11 +590,12 @@
             .alert-success { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; border-radius: 0.75rem; padding: 0.75rem 1rem; }
             .alert-error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #f87171; border-radius: 0.75rem; padding: 0.75rem 1rem; }
             .data-table { width: 100%; font-size: 0.875rem; }
+            .overflow-x-auto .data-table { min-width: 600px; }
             .data-table thead tr { border-bottom: 1px solid #1f2937; }
-            .data-table thead th { padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+            .data-table thead th { padding: 0.75rem; text-align: left; font-size: 0.75rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
             .data-table tbody tr { border-bottom: 1px solid rgba(31,41,55,0.6); transition: background-color 0.15s; }
             .data-table tbody tr:hover { background: rgba(31,41,55,0.3); }
-            .data-table tbody td { padding: 0.75rem; }
+            .data-table tbody td { padding: 0.75rem; white-space: nowrap; }
             .data-table tfoot td { padding: 0.75rem; border-top: 1px solid #374151; }
             .badge { display: inline-flex; align-items: center; padding: 0.125rem 0.625rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
             .badge-active { background: rgba(6,182,212,0.15); color: #22d3ee; }
@@ -603,6 +604,15 @@
             .badge-failed { background: rgba(239,68,68,0.15); color: #f87171; }
             .glow-cyan { box-shadow: 0 0 30px rgba(0,212,255,0.08); }
             .glow-green { box-shadow: 0 0 30px rgba(0,255,136,0.08); }
+            .btn-icon, .btn-icon-sm { 
+                min-width: 2.75rem; 
+                min-height: 2.75rem; 
+                display: inline-flex; 
+                align-items: center; 
+                justify-content: center; 
+            }
+            .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+            .scrollbar-hide::-webkit-scrollbar { display: none; }
             @keyframes slideIn { from { transform: translateX(110%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
             @keyframes fadeInUp { from { transform: translateY(12px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
             .slide-in { animation: slideIn 0.35s cubic-bezier(.22,.68,0,1.2); }
