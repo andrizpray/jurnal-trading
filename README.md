@@ -1,4 +1,4 @@
-# 📈 Trading Journal Pro
+# 📈 Trading Journal
 
 **A Professional Trading Journal & Plan Generator for Forex Traders**
 
