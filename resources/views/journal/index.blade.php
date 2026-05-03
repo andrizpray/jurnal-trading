@@ -25,29 +25,29 @@
 </div>
 
 {{-- Stats --}}
-<div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 items-stretch">
     @php
         $totalWr = ($stats->total ?? 0) > 0
             ? round(($stats->wins / $stats->total) * 100, 1) : 0;
     @endphp
-    <div class="stat-card text-center">
+    <div class="stat-card text-center flex flex-col justify-center">
         <div class="text-gray-400 text-xs">Total Entry</div>
-        <div class="text-2xl font-bold">{{ $stats->total ?? 0 }}</div>
+        <div class="text-2xl font-bold mt-1">{{ $stats->total ?? 0 }}</div>
     </div>
-    <div class="stat-card text-center">
+    <div class="stat-card text-center flex flex-col justify-center">
         <div class="text-gray-400 text-xs">Win Rate</div>
-        <div class="text-2xl font-bold {{ $totalWr >= 50 ? 'text-green-400' : 'text-red-400' }}">{{ $totalWr }}%</div>
-        <div class="text-xs text-gray-600">{{ $stats->wins ?? 0 }}W / {{ $stats->losses ?? 0 }}L</div>
+        <div class="text-2xl font-bold mt-1 {{ $totalWr >= 50 ? 'text-green-400' : 'text-red-400' }}">{{ $totalWr }}%</div>
+        <div class="text-xs text-gray-600 mt-0.5">{{ $stats->wins ?? 0 }}W / {{ $stats->losses ?? 0 }}L</div>
     </div>
-    <div class="stat-card text-center">
+    <div class="stat-card text-center flex flex-col justify-center">
         <div class="text-gray-400 text-xs">Total P&L</div>
-        <div class="text-2xl font-bold {{ ($stats->total_pnl ?? 0) >= 0 ? 'text-green-400' : 'text-red-400' }}">
+        <div class="text-2xl font-bold mt-1 {{ ($stats->total_pnl ?? 0) >= 0 ? 'text-green-400' : 'text-red-400' }}">
             {{ ($stats->total_pnl ?? 0) >= 0 ? '+' : '' }}{{ number_format($stats->total_pnl ?? 0, 0, ',', '.') }}
         </div>
     </div>
-    <div class="stat-card text-center">
+    <div class="stat-card text-center flex flex-col justify-center">
         <div class="text-gray-400 text-xs">Avg P&L / Trade</div>
-        <div class="text-2xl font-bold {{ ($stats->avg_pnl ?? 0) >= 0 ? 'text-cyan-400' : 'text-red-400' }}">
+        <div class="text-2xl font-bold mt-1 {{ ($stats->avg_pnl ?? 0) >= 0 ? 'text-cyan-400' : 'text-red-400' }}">
             {{ number_format($stats->avg_pnl ?? 0, 0, ',', '.') }}
         </div>
     </div>

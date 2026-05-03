@@ -265,6 +265,7 @@
         .swatch-light { background: linear-gradient(135deg, #ffffff 50%, #3b82f6 50%); border-color: #93c5fd !important; }
         .swatch-ocean { background: linear-gradient(135deg, #0c1a2e 50%, #0e3a5c 50%); }
         .swatch-forest{ background: linear-gradient(135deg, #0d1f0d 50%, #1a3a1a 50%); }
+        .swatch-neubrutalism { background: linear-gradient(135deg, #ffe066 50%, #ff6b35 50%); border: 2px solid #1a1a1a !important; }
 
         /* ===== OCEAN THEME ===== */
         [data-theme="ocean"] {
@@ -355,6 +356,185 @@
         [data-theme="forest"] .bg-gray-700    { background-color: var(--bg-700) !important; }
         [data-theme="forest"] .border-gray-800 { border-color: var(--border) !important; }
         [data-theme="forest"] .border-gray-700 { border-color: var(--input-border) !important; }
+
+        /* ===== NEUBRUTALISM THEME ===== */
+        [data-theme="neubrutalism"] {
+            --bg-base:      #ffffff;
+            --bg-page:      #fff9e6;
+            --bg-900:       #ffffff;
+            --bg-800:       #fff3cc;
+            --bg-700:       #ffe999;
+            --bg-card:      linear-gradient(135deg, #ffffff 0%, #fffbe6 100%);
+            --border:       #1a1a1a;
+            --border-hover: #333333;
+            --text-primary: #1a1a1a;
+            --text-muted:   #555555;
+            --text-faint:   #777777;
+            --text-placeholder: #aaaaaa;
+            --accent:       #ff6b35;
+            --accent-light: #ff8c5a;
+            --accent-ring:  rgba(255, 107, 53, 0.3);
+            --nav-bg:       rgba(255, 255, 255, 0.95);
+            --nav-sub-bg:   rgba(255, 249, 230, 0.95);
+            --nav-link-hover-bg: #fff3cc;
+            --nav-active-bg:    rgba(255, 107, 53, 0.12);
+            --nav-active-border: rgba(255, 107, 53, 0.4);
+            --input-bg:     #ffffff;
+            --input-border: #1a1a1a;
+            --scrollbar-track: #fff9e6;
+            --scrollbar-thumb: #1a1a1a;
+            --scrollbar-hover: #ff6b35;
+            --table-hover:  rgba(255, 243, 204, 0.7);
+            --progress-bg:  #ffe999;
+            --day-pending-bg: #fff3cc;
+            --day-pending-text: #555555;
+        }
+        /* Neubrutalism: bold borders + offset shadow on key elements */
+        [data-theme="neubrutalism"] header {
+            border-bottom: 3px solid #1a1a1a !important;
+            box-shadow: 4px 4px 0 #1a1a1a;
+        }
+        [data-theme="neubrutalism"] nav.tj-nav {
+            border-bottom: 3px solid #1a1a1a !important;
+            box-shadow: 0 4px 0 #1a1a1a;
+        }
+        [data-theme="neubrutalism"] .tech-card,
+        [data-theme="neubrutalism"] .stat-card {
+            border: 3px solid #1a1a1a !important;
+            border-radius: 12px !important;
+            box-shadow: 4px 4px 0 #1a1a1a;
+        }
+        [data-theme="neubrutalism"] .tech-card:hover {
+            box-shadow: 6px 6px 0 #1a1a1a;
+            transform: translate(-1px, -1px);
+        }
+        [data-theme="neubrutalism"] .btn-primary {
+            background: #ff6b35 !important;
+            color: #ffffff !important;
+            border: 3px solid #1a1a1a !important;
+            border-radius: 10px !important;
+            box-shadow: 4px 4px 0 #1a1a1a;
+            font-weight: 700 !important;
+        }
+        [data-theme="neubrutalism"] .btn-primary:hover {
+            box-shadow: 2px 2px 0 #1a1a1a;
+            transform: translate(2px, 2px);
+        }
+        [data-theme="neubrutalism"] .btn-primary:active {
+            box-shadow: 0 0 0 #1a1a1a;
+            transform: translate(4px, 4px);
+        }
+        [data-theme="neubrutalism"] .btn-secondary {
+            background: #ffe066 !important;
+            color: #1a1a1a !important;
+            border: 3px solid #1a1a1a !important;
+            border-radius: 10px !important;
+            box-shadow: 4px 4px 0 #1a1a1a;
+            font-weight: 700 !important;
+        }
+        [data-theme="neubrutalism"] .btn-secondary:hover {
+            background: #ffd633 !important;
+            box-shadow: 2px 2px 0 #1a1a1a;
+            transform: translate(2px, 2px);
+        }
+        [data-theme="neubrutalism"] .form-input,
+        [data-theme="neubrutalism"] .form-select {
+            border: 3px solid #1a1a1a !important;
+            border-radius: 10px !important;
+            box-shadow: 3px 3px 0 #1a1a1a;
+        }
+        [data-theme="neubrutalism"] .form-input:focus,
+        [data-theme="neubrutalism"] .form-select:focus {
+            border-color: #ff6b35 !important;
+            box-shadow: 6px 6px 0 #1a1a1a, 0 0 0 2px var(--accent-ring) !important;
+        }
+        [data-theme="neubrutalism"] .data-table thead tr {
+            border-color: #1a1a1a !important;
+            border-bottom: 3px solid #1a1a1a !important;
+        }
+        [data-theme="neubrutalism"] .data-table tbody tr {
+            border-color: #1a1a1a !important;
+        }
+        [data-theme="neubrutalism"] .progress-bar {
+            background: #ffe999 !important;
+            border: 2px solid #1a1a1a;
+            border-radius: 6px;
+        }
+        [data-theme="neubrutalism"] .progress-fill {
+            background: #ff6b35 !important;
+            border-radius: 4px;
+        }
+        [data-theme="neubrutalism"] .currency-btn,
+        [data-theme="neubrutalism"] .trader-btn {
+            border: 3px solid #1a1a1a !important;
+            border-radius: 10px !important;
+            box-shadow: 3px 3px 0 #1a1a1a;
+            font-weight: 600;
+        }
+        [data-theme="neubrutalism"] .currency-btn.active,
+        [data-theme="neubrutalism"] .trader-btn.active {
+            background: #ff6b35 !important;
+            color: #ffffff !important;
+            border-color: #1a1a1a !important;
+            box-shadow: 4px 4px 0 #1a1a1a;
+        }
+        [data-theme="neubrutalism"] .nav-link.active {
+            background: #ffe066 !important;
+            color: #1a1a1a !important;
+            border-color: #1a1a1a !important;
+            font-weight: 700;
+        }
+        [data-theme="neubrutalism"] .theme-dropdown {
+            border: 3px solid #1a1a1a;
+            border-radius: 12px;
+            box-shadow: 6px 6px 0 #1a1a1a;
+        }
+        [data-theme="neubrutalism"] .theme-option {
+            border: 2px solid transparent;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        [data-theme="neubrutalism"] .theme-option.selected {
+            background: #ffe066 !important;
+            color: #1a1a1a !important;
+            border-color: #1a1a1a;
+        }
+        [data-theme="neubrutalism"] .theme-swatch {
+            border: 2px solid #1a1a1a;
+            border-radius: 6px;
+        }
+        [data-theme="neubrutalism"] .tj-logo-mark {
+            background: linear-gradient(135deg, #ff6b35, #ffe066) !important;
+            border: 3px solid #1a1a1a;
+            border-radius: 12px !important;
+            box-shadow: 3px 3px 0 #1a1a1a;
+        }
+        /* Neubrutalism text overrides */
+        [data-theme="neubrutalism"] .text-white { color: #1a1a1a !important; }
+        [data-theme="neubrutalism"] .text-gray-100,
+        [data-theme="neubrutalism"] .text-gray-200,
+        [data-theme="neubrutalism"] .text-gray-300 { color: var(--text-primary) !important; }
+        [data-theme="neubrutalism"] .text-gray-400  { color: var(--text-muted) !important; }
+        [data-theme="neubrutalism"] .text-gray-500  { color: var(--text-faint) !important; }
+        [data-theme="neubrutalism"] .bg-gray-950,
+        [data-theme="neubrutalism"] .bg-gray-900 { background-color: var(--bg-900) !important; }
+        [data-theme="neubrutalism"] .bg-gray-800 { background-color: var(--bg-800) !important; }
+        [data-theme="neubrutalism"] .bg-gray-700 { background-color: var(--bg-700) !important; }
+        [data-theme="neubrutalism"] .border-gray-800,
+        [data-theme="neubrutalism"] .border-gray-700 { border-color: var(--border) !important; }
+        [data-theme="neubrutalism"] .divide-gray-800 > * { border-color: var(--border) !important; }
+        [data-theme="neubrutalism"] .text-cyan-400 { color: var(--accent) !important; }
+        [data-theme="neubrutalism"] .gradient-text {
+            background: linear-gradient(135deg, #ff6b35, #d63384);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        [data-theme="neubrutalism"] .glow-cyan { box-shadow: 4px 4px 0 #1a1a1a !important; }
+        [data-theme="neubrutalism"] .glow-green { box-shadow: 4px 4px 0 #1a1a1a !important; }
+        [data-theme="neubrutalism"] .bg-gray-800\/30 { background-color: rgba(255, 224, 102, 0.35) !important; }
+        [data-theme="neubrutalism"] .hover\:bg-gray-800\/50:hover { background-color: rgba(255, 224, 102, 0.55) !important; }
+        [data-theme="neubrutalism"] .bg-gray-800\/50 { background-color: rgba(255, 224, 102, 0.65) !important; }
 
         /* Light theme: aksen biru saja */
         [data-theme="light"] .gradient-text {
@@ -712,7 +892,7 @@
                 metaColor.setAttribute('content', theme === 'light' ? '#2563eb' : '#0f172a');
             }
             // update toggle icon
-            var icons = { dark:'fa-moon', light:'fa-sun', ocean:'fa-water', forest:'fa-tree' };
+            var icons = { dark:'fa-moon', light:'fa-sun', ocean:'fa-water', forest:'fa-tree', neubrutalism:'fa-bolt' };
             var btn = document.getElementById('theme-icon');
             if (btn) {
                 btn.className = 'fas ' + (icons[theme] || 'fa-moon');
@@ -723,9 +903,9 @@
             });
             // Update Chart.js if present
             if (typeof Chart !== 'undefined') {
-                var isDark = theme !== 'light';
-                Chart.defaults.color = isDark ? '#9ca3af' : '#475569';
-                Chart.defaults.borderColor = isDark ? '#374151' : '#bfdbfe';
+                var isDark = theme !== 'light' && theme !== 'neubrutalism';
+                Chart.defaults.color = isDark ? '#9ca3af' : (theme === 'neubrutalism' ? '#555555' : '#475569');
+                Chart.defaults.borderColor = isDark ? '#374151' : (theme === 'neubrutalism' ? '#1a1a1a' : '#bfdbfe');
             }
         };
 

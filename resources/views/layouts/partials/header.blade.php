@@ -33,6 +33,9 @@
                         <div class="theme-option" data-theme="forest" onclick="setTheme('forest')">
                             <span class="theme-swatch swatch-forest"></span> Forest
                         </div>
+                        <div class="theme-option" data-theme="neubrutalism" onclick="setTheme('neubrutalism')">
+                            <span class="theme-swatch swatch-neubrutalism"></span> Neo Brutal
+                        </div>
                     </div>
                 </div>
 
